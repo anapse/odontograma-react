@@ -1,0 +1,87 @@
+/* styles/global.css o en tu archivo principal */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #e3efff);
+  color: #2f3542;
+}
+
+/* Contenedor general */
+#root,
+.App {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tarjeta de diagnóstico */
+.diagnosis-card {
+  width: 200px;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #dfe6e9;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.diagnosis-card:hover {
+  transform: scale(1.02);
+}
+
+.diagnosis-card h4 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #1e272e;
+}
+
+.diagnosis-card ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0.85rem;
+}
+
+/* Botón de eliminar */
+.diagnosis-card button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #b2bec3;
+  cursor: pointer;
+}
+
+/* Encabezado */
+h2 {
+  font-size: 1.8rem;
+  color: #2f3542;
+  margin-bottom: 1rem;
+}
+
+/* Checkboxes */
+label {
+  font-size: 0.95rem;
+  color: #2d3436;
+}
+
+/* Contenedor de dientes */
+.tooth-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* Separador */
+hr {
+  border: none;
+  border-top: 1px solid #dcdde1;
+  width: 100%;
+  margin: 1.5rem 0;
+}
