@@ -4,14 +4,14 @@ import { odontogramaConstants } from "../constants/odontograma";
 import '../styles/Teeth.css'; // Import the CSS styles for the Teeth component
 
 const {
-    upperAdult,
-    upperAdultRight,
-    lowerAdult,
-    lowerAdultRight,
-    upperChild,
-    upperChildRight,
-    lowerChild,
-    lowerChildRight
+    upperAdult = [],
+    upperAdultRight = [],
+    lowerAdult = [],
+    lowerAdultRight = [],
+    upperChild = [],
+    upperChildRight = [],
+    lowerChild = [],
+    lowerChildRight = []
 } = odontogramaConstants;
 
 const Teeth = ({ isAdult, handleToothClick, diagnosisData }) => {
@@ -34,15 +34,15 @@ const Teeth = ({ isAdult, handleToothClick, diagnosisData }) => {
         <div className="teeth-group">
             <div className="teeth-scroll-wrapper">
                 <div className="teeth-row">
-                    {isAdult ? upperAdult.map(renderTooth) : upperChild.map(renderTooth)}
+                    {(isAdult ? upperAdult : upperChild).filter(Boolean).map(renderTooth)}
                     <div className="teeth-separator" />
-                    {isAdult ? upperAdultRight.map(renderTooth) : upperChildRight.map(renderTooth)}
+                    {(isAdult ? upperAdultRight : upperChildRight).filter(Boolean).map(renderTooth)}
                 </div>
                 <div className="teeth-separator2" />
                 <div className="teeth-row">
-                    {isAdult ? lowerAdult.map(renderTooth) : lowerChild.map(renderTooth)}
+                    {(isAdult ? lowerAdult : lowerChild).filter(Boolean).map(renderTooth)}
                     <div className="teeth-separator" />
-                    {isAdult ? lowerAdultRight.map(renderTooth) : lowerChildRight.map(renderTooth)}
+                    {(isAdult ? lowerAdultRight : lowerChildRight).filter(Boolean).map(renderTooth)}
                 </div>
             </div>
         </div>

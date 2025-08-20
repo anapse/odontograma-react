@@ -1,6 +1,6 @@
 import React from "react"
 import { odontogramaConstants } from "../constants/odontograma"
-const { DIAGNOSIS_OPTIONS, zonesLabels, } = odontogramaConstants
+const { DIAGNOSIS_OPTIONS = [], zonesLabels = {}, } = odontogramaConstants
 
 const DiagnosisCards = ({ diagnosisData, onDelete, isMirrored, onCardClick }) => {
     const sortedDiagnosisEntries = Object.entries(diagnosisData).sort((a, b) => a[0].localeCompare(b[0]))

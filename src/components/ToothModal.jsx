@@ -5,7 +5,7 @@ import { odontogramaConstants, TREATMENTS } from '../constants/odontograma'
 export default function ToothModal({ toothId, diagnosis = {}, isMirrored = false, onUpdate, onClose }) {
     const [activeZone, setActiveZone] = useState(null)
     const [treatmentModalZone, setTreatmentModalZone] = useState(null)
-    const { DIAGNOSIS_OPTIONS, zonesLabels, zones } = odontogramaConstants
+    const { DIAGNOSIS_OPTIONS = [], zonesLabels = {}, zones = [] } = odontogramaConstants
 
     const handleSelectDiagnosis = (zone, code) => {
         const updated = { ...diagnosis }

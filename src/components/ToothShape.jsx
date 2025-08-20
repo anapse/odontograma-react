@@ -3,7 +3,7 @@ import React from 'react'
 import { odontogramaConstants } from '../constants/odontograma'
 
 const {
-    lowerAdult, lowerAdultRight, lowerChild, lowerChildRight,
+    lowerAdult = [], lowerAdultRight = [], lowerChild = [], lowerChildRight = [],
 } = odontogramaConstants
 
 export function ToothShape({
@@ -23,7 +23,10 @@ export function ToothShape({
 
     // Determinar orientación: arriba/inferior
 
-    const islower = lowerAdult.includes(toothId) || lowerChild.includes(toothId) || lowerAdultRight.includes(toothId) || lowerChildRight.includes(toothId)
+    const islower = (lowerAdult || []).includes(toothId) || 
+                   (lowerChild || []).includes(toothId) || 
+                   (lowerAdultRight || []).includes(toothId) || 
+                   (lowerChildRight || []).includes(toothId)
 
     // Círculo pequeño arriba o abajo
     const center = size / 2
