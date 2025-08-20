@@ -9,7 +9,7 @@ const {
 export function ToothShape({
     toothId,
     size = 100,
-
+    diagnosed = false,
     onClick
 }) {
     const num = parseInt(toothId, 10)
@@ -100,7 +100,7 @@ export function ToothShape({
                     ${center + baseWidth / 2},${yBase}
                     ${center},${yTip}
                 `}
-                fill="none"
+                fill="#fff"
                 stroke="#000"
                 strokeWidth="2"
             />
@@ -153,7 +153,7 @@ export function ToothShape({
                     cy={circleCenterY}
                     rx={circleRadius * 1}  // Ancho horizontal
                     ry={circleRadius * 0.75}  // Alto vertical
-                    fill="#fff"
+                    fill={diagnosed ? "#d0f0fd" : "#fff"}
                     stroke="#000"
                     strokeWidth="2"
                 />
